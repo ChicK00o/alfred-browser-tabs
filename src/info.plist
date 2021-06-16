@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.epilande.browser-tabs</string>
-	<key>category</key>
-	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>05291F67-A2F4-49A2-A3AA-23923B919638</key>
@@ -85,6 +83,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>05291F67-A2F4-49A2-A3AA-23923B919638</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>354AC5A2-5253-4ECB-8993-2B8F0D30B739</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>44CB4B42-4CD6-4B69-B6C1-22E513EA1258</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8ADC7A7B-9CC8-4E77-B187-DEC81B302E25</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -181,6 +202,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8ADC7A7B-9CC8-4E77-B187-DEC81B302E25</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F45500ED-412B-4C62-A7AC-4A29E3F6647F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A2105F1B-6BE8-4AEB-B9DD-03424C878C7C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>354AC5A2-5253-4ECB-8993-2B8F0D30B739</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A78D61D6-FD39-40C8-9C2D-169AEBE0C096</key>
 		<array>
 			<dict>
@@ -235,6 +282,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>F45500ED-412B-4C62-A7AC-4A29E3F6647F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E139A25E-9262-4C9D-BB21-9D246699AC90</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>354AC5A2-5253-4ECB-8993-2B8F0D30B739</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -328,11 +388,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>17</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1310720</integer>
-				<key>hotstring</key>
-				<string>T</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -492,11 +550,9 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>11</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1310720</integer>
-				<key>hotstring</key>
-				<string>B</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -573,8 +629,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -655,6 +709,127 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>0C66AA56-A328-4470-B5C2-7A812B8F96C7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>126</integer>
+				<key>keyword</key>
+				<string>t</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading tabs...</string>
+				<key>script</key>
+				<string># Export user query to `query` environment variable, so `fuzzy.py` can read it
+export query="$1"
+# Or if you're using "with input as {query}"
+# export query="{query}"
+
+# call your original script via `fuzzy.py`
+./fuzzy.py ./list-tabs.js "Microsoft Edge Beta"
+
+#./list-tabs.js "Microsoft Edge Beta"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>list-tabs</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Edge - Tabs</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>354AC5A2-5253-4ECB-8993-2B8F0D30B739</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>17</integer>
+				<key>hotmod</key>
+				<integer>393216</integer>
+				<key>hotstring</key>
+				<string>T</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>E139A25E-9262-4C9D-BB21-9D246699AC90</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>browser</key>
+					<string>Microsoft Edge Beta</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>8ADC7A7B-9CC8-4E77-B187-DEC81B302E25</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>text</key>
+				<string>Search Tabs</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.fallback</string>
+			<key>uid</key>
+			<string>A2105F1B-6BE8-4AEB-B9DD-03424C878C7C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -861,9 +1036,9 @@ Commands:
 		<key>05291F67-A2F4-49A2-A3AA-23923B919638</key>
 		<dict>
 			<key>xpos</key>
-			<integer>325</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>625</integer>
+			<integer>850</integer>
 		</dict>
 		<key>0C66AA56-A328-4470-B5C2-7A812B8F96C7</key>
 		<dict>
@@ -889,9 +1064,16 @@ Commands:
 		<key>2FCC8294-6DBE-4C23-A1F4-4F269DD785A8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>80</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>625</integer>
+			<integer>850</integer>
+		</dict>
+		<key>354AC5A2-5253-4ECB-8993-2B8F0D30B739</key>
+		<dict>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>595</integer>
 		</dict>
 		<key>44CB4B42-4CD6-4B69-B6C1-22E513EA1258</key>
 		<dict>
@@ -931,30 +1113,44 @@ Commands:
 		<key>7FE334B2-8D0A-40CF-96C0-334C39924EFC</key>
 		<dict>
 			<key>xpos</key>
+			<integer>580</integer>
+			<key>ypos</key>
+			<integer>880</integer>
+		</dict>
+		<key>8ADC7A7B-9CC8-4E77-B187-DEC81B302E25</key>
+		<dict>
+			<key>xpos</key>
 			<integer>600</integer>
 			<key>ypos</key>
-			<integer>655</integer>
+			<integer>625</integer>
 		</dict>
 		<key>970145EF-4ABC-4829-AA79-F48C6B355296</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1260</integer>
+			<integer>1240</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>1005</integer>
+		</dict>
+		<key>A2105F1B-6BE8-4AEB-B9DD-03424C878C7C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>75</integer>
+			<key>ypos</key>
+			<integer>720</integer>
 		</dict>
 		<key>A78D61D6-FD39-40C8-9C2D-169AEBE0C096</key>
 		<dict>
 			<key>xpos</key>
-			<integer>890</integer>
+			<integer>870</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>B4244A14-9629-4620-BA03-C90CEADF68F7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1075</integer>
+			<integer>1055</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>1005</integer>
 		</dict>
 		<key>C670C61E-A7A8-4A02-9A61-453AAD409775</key>
 		<dict>
@@ -977,6 +1173,13 @@ Commands:
 			<key>ypos</key>
 			<integer>255</integer>
 		</dict>
+		<key>E139A25E-9262-4C9D-BB21-9D246699AC90</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>595</integer>
+		</dict>
 		<key>EA96FB48-3A34-4C28-823C-07502A6DB319</key>
 		<dict>
 			<key>xpos</key>
@@ -987,9 +1190,9 @@ Commands:
 		<key>F21C0900-31CD-4A06-86DE-0CDECA1E0062</key>
 		<dict>
 			<key>xpos</key>
-			<integer>890</integer>
+			<integer>870</integer>
 			<key>ypos</key>
-			<integer>625</integer>
+			<integer>850</integer>
 		</dict>
 		<key>F45500ED-412B-4C62-A7AC-4A29E3F6647F</key>
 		<dict>
